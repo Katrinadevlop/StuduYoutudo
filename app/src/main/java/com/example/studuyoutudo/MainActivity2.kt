@@ -1,6 +1,8 @@
 package com.example.studuyoutudo
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -38,5 +40,10 @@ class MainActivity2 : AppCompatActivity() {
         textView.text = randeomNum.toString()
         val textView2 = findViewById<TextView>(R.id.textView2)
         textView2.text = getString(R.string.randomNumberText, count)
+    }
+
+    fun IntentMy(view: View){
+        val intent = Intent(this, MainActivity3::class.java)
+        startActivity(intent)
     }
 }
